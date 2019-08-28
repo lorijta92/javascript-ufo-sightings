@@ -23,28 +23,22 @@
       <div class="row margin-top-50">
 
         <div class="col-md-2">
-          <aside class="filters">
-            <div class="panel panel-default">
-              <div class="panel-heading text-uppercase">Filter Search</div>
-              <div class="panel-body"><br>
+          <form>
+            <div class="form-group text-uppercase">
 
-                <form>
-                  <div class="form-group text-uppercase">
-                    <ul class="list-group" id="filters">
-
-                      <li class="filter list-group-item">
-                        <label for="date">Date</label>
-                        <input class="form-control" id="datetime" type="text" placeholder="1/1/2010">
-                      </li>
-
-                    </ul>
-                    <button id="filter-btn" type="button" class="btn btn-default text-uppercase" style="font-weight: lighter">Filter Table</button>
-                  </div>
-                </form>
-
-              </div>
+              <ul class="list-group" id="filters" style="list-style-type:none">
+                <li class="filter list-group-item">
+                  <label for="date">Filter by Date</label>
+                  <input class="form-control" id="datetime" type="text" placeholder="1/1/2010"> <!-- select -->
+                </li>
+              </ul>
+              <br>
+              <button id="filter-btn" type="button" class="btn btn-secondary text-uppercase" style="font-weight: lighter">Filter Table</button> <!-- select -->
+              <br><br>
+              <button id="unfilter-btn" type="button" class="btn btn-secondary text-uppercase" style="font-weight: lighter">Unfilter Table</button>
             </div>
-          </aside>
+          </form>
+
         </div>
 
 
@@ -62,7 +56,7 @@
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody></tbody> <!-- select -->
             </table>
           </div>
         </div>
