@@ -31,8 +31,26 @@ button.on("click", function() {
     console.log(inputValue);
     
     // Filter table based on user input
-    test = tableData.filter(data => data.datetime === inputValue);
-    console.log(test)
+    var filteredData = tableData.filter(data => data.datetime === inputValue);
+    console.log(filteredData);
 
-    // for each loop, remove original, write new
+    // Clear original table
+    tbody.html("");
+
+    // Write new table with forEach loop
+    filteredData.forEach(obj => {
+        
+        // Make new row
+        var row = tbody.append("tr");
+
+        // Append each row with data
+        row.append("td").text(obj.datetime);
+        row.append("td").text(obj.city);
+        row.append("td").text(obj.state);
+        row.append("td").text(obj.country);
+        row.append("td").text(obj.shape);
+        row.append("td").text(obj.durationMinutes);
+        row.append("td").text(obj.comments);
+    });
+
 });
