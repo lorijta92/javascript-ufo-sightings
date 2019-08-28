@@ -21,38 +21,18 @@ tableData.map(data => {
 });
 
 // EVENT LISTENER: filter by date input
-var button = d3.select(".btn btn-default");
+var button = d3.select("#filter-btn");
 
 button.on("click", function() {
 
     // Select user input
-    var inputValue = d3.select(".form-control").property("value");
+    var inputValue = d3.select("#datetime").property("value");
+
+    console.log(inputValue);
     
     // Filter table based on user input
-    tableData.filter(data => data.datetime === inputValue);
+    test = tableData.filter(data => data.datetime === inputValue);
+    console.log(test)
+
+    // for each loop, remove original, write new
 });
-
-
-// UNIQUE VALUES FOR FILTERS
-
-// Grab unique cities
-var cities = [];
-
-tableData.forEach(function(data) {
-    if (data.city in cities) {}
-    else {
-        cities.push(data.city);
-    }
-});
-console.log(cities);
-
-// Grab unique states
-var states = [];
-
-tableData.forEach(function(data) {
-    if (data.state in states) {}
-    else {
-        states.push(data.state);
-    }
-});
-console.log(states);
